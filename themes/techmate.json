@@ -1,0 +1,307 @@
+{
+  "id": "techmate",
+  "name": "Bantuan Permasalahan Laptop",
+  "bot_name": "TechMate",
+  "avatar": "💻",
+  "color": "#2563eb",
+  "description": "Chatbot bantuan awal untuk mengenali dan menangani masalah laptop sehari-hari.",
+  "greeting": "Halo! Aku TechMate 💻. Aku bisa membantu memberikan saran awal untuk masalah laptop seperti lemot, panas, baterai boros, Wi-Fi, penyimpanan, laptop tidak menyala, dan aplikasi error. Apa yang sedang terjadi pada laptopmu?",
+  "suggestions": [
+    "Laptopku lemot banget",
+    "Laptop panas padahal baru dinyalakan",
+    "Baterai cepat drop",
+    "Wi-Fi tersambung tapi tidak ada internet",
+    "Drive C penuh",
+    "Laptop tidak mau hidup",
+    "Aplikasi sering keluar sendiri"
+  ],
+  "fallback": [
+    "Aku belum menemukan topik yang cocok. Boleh ceritakan gejalanya dengan sedikit lebih spesifik? Misalnya kapan masalah muncul dan apa yang terlihat di layar.",
+    "Supaya saranku tidak keliru, pilih masalah yang paling mendekati: laptop lemot, cepat panas, baterai boros, Wi-Fi, penyimpanan penuh, laptop tidak menyala, atau aplikasi error.",
+    "Aku belum punya panduan untuk pertanyaan itu. Kamu bisa menyebutkan merek laptop, sistem operasi, gejala yang muncul, dan kapan masalah mulai terjadi."
+  ],
+  "intents": [
+    {
+      "tag": "salam",
+      "patterns": [
+        "halo",
+        "hai",
+        "hai techmate",
+        "hello",
+        "selamat pagi",
+        "selamat siang",
+        "selamat sore",
+        "selamat malam",
+        "permisi",
+        "assalamualaikum",
+        "pagi techmate",
+        "siang techmate",
+        "sore techmate",
+        "malam techmate",
+        "halo min",
+        "hai bot",
+        "permisi techmate"
+      ],
+      "responses": [
+        "Halo! Selamat datang di TechMate. Ada masalah apa dengan laptopmu?",
+        "Hai! Yuk ceritakan kendala laptop yang sedang kamu alami."
+      ]
+    },
+    {
+      "tag": "bantuan",
+      "patterns": [
+        "kamu bisa bantu apa",
+        "apa yang bisa kamu bantu",
+        "fitur chatbot ini apa",
+        "bantuan",
+        "cara menggunakan chatbot",
+        "masalah apa saja yang bisa ditanyakan",
+        "bisa bantu masalah laptop",
+        "aku butuh bantuan laptop",
+        "tolong bantu laptopku",
+        "fitur yang tersedia apa saja",
+        "daftar masalah yang bisa diperiksa"
+      ],
+      "responses": [
+        "Aku bisa membantu memberikan saran awal untuk tujuh masalah laptop: lemot, cepat panas, baterai boros, Wi-Fi bermasalah, penyimpanan penuh, laptop tidak menyala, dan aplikasi error. Coba pilih salah satunya atau ceritakan masalahmu."
+      ]
+    },
+    {
+      "tag": "identitas",
+      "patterns": [
+        "kamu siapa",
+        "siapa nama kamu",
+        "ini chatbot apa",
+        "apa itu techmate",
+        "kamu bot apa",
+        "nama bot ini siapa",
+        "techmate itu apa",
+        "apakah kamu chatbot",
+        "kamu manusia atau bot"
+      ],
+      "responses": [
+        "Aku {nama_bot}, chatbot berbasis aturan yang menyediakan informasi dan saran awal untuk beberapa permasalahan laptop. Jawabanku berasal dari pola dan pengetahuan yang sudah disiapkan, bukan dari AI generatif."
+      ]
+    },
+    {
+      "tag": "diagnosis_laptop_lemot",
+      "patterns": [
+        "laptop saya lemot",
+        "laptop terasa lambat",
+        "laptop lambat saat digunakan",
+        "komputer saya lemot",
+        "laptop loading terus",
+        "aplikasi lama dibuka di laptop",
+        "laptop sering freeze",
+        "kenapa laptop jadi lambat",
+        "laptopku lemot banget",
+        "laptop ngelag",
+        "laptop ngehang",
+        "laptop berat saat buka aplikasi",
+        "laptop lama merespons",
+        "komputer ngelag",
+        "laptop lambat banget",
+        "kenapa laptopku lemot",
+        "laptop macet saat dipakai",
+        "buka browser lama sekali"
+      ],
+      "responses": [
+        "Laptop yang lambat biasanya dipengaruhi aplikasi yang membebani CPU/RAM, terlalu banyak program saat startup, ruang penyimpanan yang menipis, atau kondisi perangkat. Coba langkah berikut secara berurutan:\n\n1. Simpan pekerjaan yang sedang dibuka. Tutup aplikasi dan tab browser yang tidak diperlukan.\n2. Tekan Ctrl + Shift + Esc untuk membuka Task Manager. Jika tampil sederhana, pilih More details.\n3. Pada tab Processes, klik kolom CPU atau Memory untuk mengurutkan penggunaan tertinggi. Perhatikan aplikasi yang memang kamu kenali dan sedang tidak dibutuhkan. Tutup aplikasi tersebut melalui aplikasi itu sendiri. Gunakan End task hanya untuk aplikasi yang kamu kenali dan tidak sedang menyimpan pekerjaan; jangan menghentikan proses Windows yang tidak kamu pahami.\n4. Buka tab Startup apps. Nonaktifkan aplikasi pihak ketiga yang tidak perlu berjalan otomatis. Jangan menonaktifkan komponen keamanan atau driver yang tidak kamu kenali.\n5. Buka Settings > System > Storage. Periksa apakah drive sistem hampir penuh. Hapus file pribadi yang memang tidak dibutuhkan, kosongkan Recycle Bin setelah diperiksa, atau pindahkan file besar ke penyimpanan lain. Jangan menghapus folder Windows, Program Files, atau file yang tidak kamu kenali.\n6. Restart laptop, lalu coba buka aplikasi yang sebelumnya lambat.\n\nCek hasilnya: apakah laptop terasa lebih responsif? Jika masih lambat, catat aplikasi yang memakai CPU/RAM paling tinggi dan kapasitas RAM serta ruang kosong drive C. Bila lambat disertai bunyi tidak normal, sering mati, atau panas berlebihan, hentikan pemakaian berat dan periksakan ke teknisi."
+      ]
+    },
+    {
+      "tag": "diagnosis_laptop_panas",
+      "patterns": [
+        "laptop saya cepat panas",
+        "laptop terasa panas",
+        "laptop overheat",
+        "kipas laptop berisik",
+        "bagian bawah laptop panas",
+        "laptop panas saat dipakai",
+        "suhu laptop tinggi",
+        "laptopku panas banget",
+        "laptop panas berlebihan",
+        "kipas laptop bunyi kencang",
+        "fan laptop berisik",
+        "laptop panas padahal tidak dipakai",
+        "laptop panas saat dicas",
+        "notebook cepat panas"
+      ],
+      "responses": [
+        "Laptop panas dapat disebabkan aplikasi berat, ventilasi tertutup, debu pada saluran udara, atau sistem pendingin yang perlu diperiksa. Lakukan pemeriksaan aman berikut:\n\n1. Jika laptop sangat panas, muncul bau terbakar, terdengar bunyi tidak normal, atau baterai/casing tampak menggembung, matikan laptop, cabut charger bila aman, jangan digunakan atau ditekan, dan bawa ke teknisi.\n2. Jika hanya terasa hangat saat digunakan, simpan pekerjaan lalu tutup game, aplikasi desain, atau aplikasi berat yang tidak diperlukan.\n3. Letakkan laptop di meja atau permukaan keras dan datar. Jangan gunakan di atas kasur, bantal, atau kain yang menutup ventilasi.\n4. Pastikan lubang udara di sisi atau bawah laptop tidak tertutup benda. Beri ruang di sekeliling ventilasi.\n5. Buka Task Manager dengan Ctrl + Shift + Esc. Periksa tab Processes dan urutkan berdasarkan CPU. Tutup aplikasi berat yang kamu kenali jika tidak diperlukan.\n6. Matikan laptop dan biarkan dingin. Bersihkan bagian luar ventilasi dengan kain lembut dan kering. Jangan memasukkan benda ke lubang ventilasi atau menyemprotkan cairan.\n7. Nyalakan kembali dan gunakan untuk aktivitas ringan beberapa menit. Perhatikan apakah kipas dan suhu kembali normal.\n\nJika laptop tetap sangat panas saat idle, sering mati sendiri, kipas tidak berputar, atau panas makin parah, jangan membongkar heatsink sendiri. Minta teknisi memeriksa kipas, debu bagian dalam, dan sistem pendingin."
+      ]
+    },
+    {
+      "tag": "diagnosis_baterai_boros",
+      "patterns": [
+        "baterai laptop cepat habis",
+        "baterai laptop boros",
+        "daya baterai cepat turun",
+        "laptop tidak tahan lama tanpa charger",
+        "baterai cepat drop",
+        "laptop mati padahal baterai masih ada",
+        "baterai laptop tidak awet",
+        "baterai laptop ngedrop",
+        "persen baterai turun cepat",
+        "laptop harus selalu dicas",
+        "baterai laptop soak",
+        "laptop mati saat charger dicabut",
+        "daya laptop cepat habis",
+        "baterai tidak awet"
+      ],
+      "responses": [
+        "Baterai cepat habis bisa disebabkan kecerahan layar, aplikasi yang boros daya, pengaturan daya, atau kapasitas baterai yang sudah menurun. Coba langkah berikut:\n\n1. Cabut charger setelah baterai terisi sesuai kebutuhan dan amati pemakaian normal. Jangan sengaja mengosongkan baterai sampai 0% berulang kali untuk mengetesnya.\n2. Turunkan kecerahan layar dan matikan Bluetooth atau lampu keyboard jika tidak diperlukan.\n3. Buka Settings > System > Power & battery. Aktifkan Battery saver dan lihat bagian Battery usage untuk mengetahui aplikasi yang banyak menggunakan daya.\n4. Tutup aplikasi yang tidak digunakan, terutama aplikasi meeting, game, browser dengan banyak tab, atau aplikasi sinkronisasi yang sedang aktif.\n5. Periksa apakah laptop menggunakan mode daya Best performance. Untuk aktivitas biasa, pilih mode Balanced atau rekomendasi hemat daya yang tersedia.\n6. Di Windows, kamu dapat membuat laporan kondisi baterai: buka Command Prompt, ketik powercfg /batteryreport, lalu tekan Enter. Buka file HTML pada lokasi yang ditampilkan dan bandingkan Design Capacity dengan Full Charge Capacity.\n7. Restart laptop dan amati apakah daya tahan membaik pada penggunaan yang sama.\n\nJika Full Charge Capacity jauh di bawah Design Capacity, laptop mati mendadak, persentase baterai meloncat, atau baterai menggembung, hentikan penggunaan jika ada tanda fisik berbahaya dan minta pemeriksaan teknisi. Jangan mencoba membuka atau mengganti baterai tanam sendiri."
+      ]
+    },
+    {
+      "tag": "diagnosis_wifi",
+      "patterns": [
+        "wifi laptop tidak bisa terhubung",
+        "wifi tidak tersambung di laptop",
+        "wifi laptop tidak muncul",
+        "laptop tidak bisa konek internet",
+        "wifi connected no internet",
+        "laptop tidak menemukan jaringan wifi",
+        "internet laptop tidak jalan",
+        "wifi laptop gagal konek",
+        "wifi tidak nyambung",
+        "wifi putus putus",
+        "laptop tidak tersambung internet",
+        "wifi ada tanda seru",
+        "wifi tersambung tapi internet mati",
+        "jaringan wifi hilang",
+        "laptop tidak bisa connect wifi",
+        "internet di laptop lemot"
+      ],
+      "responses": [
+        "Gangguan Wi-Fi bisa berasal dari router/internet, kata sandi, pengaturan Windows, atau adaptor Wi-Fi. Coba urutkan pemeriksaan agar penyebabnya lebih mudah diketahui:\n\n1. Pastikan Wi-Fi laptop aktif dan Airplane mode mati. Klik ikon jaringan di taskbar untuk memeriksanya.\n2. Periksa apakah perangkat lain, misalnya ponsel, dapat terhubung ke jaringan yang sama. Jika semua perangkat tidak bisa internet, kemungkinan masalah ada pada router atau penyedia internet.\n3. Jika hanya laptop yang bermasalah, matikan Wi-Fi selama beberapa detik lalu aktifkan kembali. Restart laptop.\n4. Jika statusnya Connected, no internet, buka situs lain dan periksa apakah jaringan meminta login melalui halaman khusus. Restart router hanya jika kamu memiliki izin dan tidak sedang mengganggu pengguna lain.\n5. Jika jaringan terlihat tetapi gagal tersambung, pilih jaringan tersebut > Forget, lalu sambungkan kembali dan masukkan kata sandi yang benar. Pastikan kamu mengetahui kata sandinya sebelum memilih Forget.\n6. Jalankan Settings > Network & internet > Advanced network settings > Network troubleshooter jika opsi tersebut tersedia.\n7. Jika jaringan Wi-Fi sama sekali tidak muncul, buka Device Manager > Network adapters. Periksa apakah adaptor Wi-Fi dinonaktifkan atau memiliki tanda peringatan. Jangan menghapus driver sembarangan; gunakan pembaruan driver dari Windows Update atau situs resmi produsen laptop.\n\nCek hasilnya dengan membuka beberapa situs. Jika semua perangkat gagal, hubungi penyedia internet. Jika hanya laptop yang gagal setelah langkah di atas, catat pesan error dan nama adaptor untuk diperiksa teknisi."
+      ]
+    },
+    {
+      "tag": "diagnosis_penyimpanan_penuh",
+      "patterns": [
+        "penyimpanan laptop penuh",
+        "memori laptop penuh",
+        "storage laptop hampir habis",
+        "drive c penuh",
+        "tidak bisa menyimpan file",
+        "muncul notifikasi disk penuh",
+        "ruang penyimpanan laptop sedikit",
+        "memori laptop habis",
+        "storage penuh",
+        "hard disk penuh",
+        "ssd hampir penuh",
+        "drive c hampir habis",
+        "ruang disk tidak cukup",
+        "tidak ada space untuk menyimpan",
+        "laptop bilang disk full"
+      ],
+      "responses": [
+        "Penyimpanan yang hampir penuh dapat membuat pembaruan gagal, file tidak bisa disimpan, dan laptop melambat. Bersihkan ruang secara hati-hati:\n\n1. Buka Settings > System > Storage untuk melihat kategori yang paling banyak menggunakan ruang.\n2. Periksa folder Downloads, Videos, Desktop, dan Recycle Bin. Urutkan file berdasarkan ukuran, lalu hapus hanya file yang kamu kenali dan memang tidak dibutuhkan.\n3. Pindahkan foto, video, dan dokumen besar ke hard disk eksternal atau layanan cloud. Pastikan salinan sudah berhasil dibuka sebelum menghapus file asli.\n4. Pada Storage, buka Temporary files. Baca setiap kategori sebelum mencentangnya. Jangan memilih Downloads jika masih ada file penting di sana. Klik Remove files hanya setelah yakin.\n5. Kosongkan Recycle Bin setelah memeriksa isinya. File yang dihapus dari sana sulit dipulihkan.\n6. Uninstall aplikasi yang tidak digunakan melalui Settings > Apps > Installed apps. Jangan menghapus aplikasi/driver sistem yang tidak kamu kenali.\n7. Restart laptop dan periksa kembali ruang kosong pada drive C. Usahakan menyisakan ruang yang cukup untuk file kerja dan pembaruan Windows.\n\nJangan menghapus folder Windows, Program Files, ProgramData, atau file sistem secara manual. Jika kapasitas tetap tidak cukup, pertimbangkan memindahkan data atau meminta bantuan teknisi untuk opsi peningkatan penyimpanan."
+      ]
+    },
+    {
+      "tag": "diagnosis_laptop_tidak_menyala",
+      "patterns": [
+        "laptop tidak mau menyala",
+        "laptop tidak bisa hidup",
+        "laptop mati total",
+        "tombol power tidak merespons",
+        "layar laptop tidak menyala",
+        "laptop tidak bisa dinyalakan",
+        "laptop tidak hidup saat ditekan power",
+        "laptop tidak mau hidup sama sekali",
+        "laptop tidak merespons tombol power",
+        "power laptop tidak menyala",
+        "layar hitam saat laptop dinyalakan",
+        "laptop mati dan tidak bisa dicas",
+        "laptop tidak ada tanda kehidupan",
+        "laptop gagal booting"
+      ],
+      "responses": [
+        "Kita periksa dari sumber listrik terlebih dahulu. Lakukan hanya pemeriksaan luar yang aman:\n\n1. Pastikan stopkontak berfungsi dengan mencoba perangkat lain yang aman. Jika menggunakan terminal listrik, periksa sakelarnya.\n2. Periksa kabel dan adaptor charger. Jangan gunakan charger yang kabelnya terkelupas, konektornya longgar, berbau terbakar, atau terasa sangat panas.\n3. Sambungkan charger langsung ke laptop dan lihat apakah lampu indikator pengisian menyala. Jika ada charger kompatibel lain yang spesifikasinya sesuai rekomendasi produsen, boleh diuji; jangan menggunakan adaptor dengan tegangan/jenis konektor yang tidak sesuai.\n4. Lepaskan perangkat USB, kartu memori, dan aksesori eksternal. Tunggu sekitar satu menit.\n5. Jika tidak ada tanda bahaya, lepaskan charger. Tekan dan tahan tombol power sekitar 15–20 detik, lepaskan, sambungkan kembali charger, lalu coba nyalakan. Langkah ini merupakan reset daya sederhana dan tidak berlaku untuk semua model. Ikuti petunjuk produsen jika model laptop memiliki prosedur khusus.\n6. Perhatikan gejalanya: apakah lampu menyala, kipas berputar, terdengar bunyi, atau layar tetap hitam? Jika laptop menyala tetapi layar hitam, coba naikkan kecerahan dan sambungkan monitor eksternal jika tersedia.\n\nJangan membuka casing, melepas baterai tanam, atau menyentuh komponen internal. Jika ada bau terbakar, cairan tumpah, baterai menggembung, atau tetap tidak ada respons, hentikan percobaan dan bawa ke teknisi. Catat merek/model laptop serta indikator yang muncul."
+      ]
+    },
+    {
+      "tag": "diagnosis_aplikasi_error",
+      "patterns": [
+        "aplikasi tidak bisa dibuka",
+        "aplikasi laptop error",
+        "program langsung tertutup",
+        "aplikasi sering crash",
+        "muncul pesan error saat membuka aplikasi",
+        "aplikasi berhenti sendiri",
+        "software tidak merespons",
+        "software tidak bisa dibuka",
+        "aplikasi keluar sendiri",
+        "aplikasi force close",
+        "program macet",
+        "aplikasi ngefreeze",
+        "aplikasi not responding",
+        "aplikasi gagal dijalankan",
+        "muncul tulisan error di aplikasi",
+        "aplikasi berhenti terus"
+      ],
+      "responses": [
+        "Aplikasi yang gagal dibuka bisa disebabkan proses macet, pembaruan bermasalah, file aplikasi rusak, atau spesifikasi yang tidak sesuai. Coba dari langkah yang paling sederhana:\n\n1. Catat nama aplikasi dan pesan error yang muncul. Jika ada kode error, simpan atau foto pesannya.\n2. Tutup aplikasi. Jika jendelanya macet, tekan Ctrl + Shift + Esc, pilih proses aplikasi yang kamu kenali, lalu klik End task. Pastikan pekerjaan yang belum disimpan memang sudah tidak dapat diselamatkan sebelum menutup paksa.\n3. Restart laptop, lalu buka aplikasi kembali.\n4. Periksa koneksi internet dan tanggal/waktu laptop jika aplikasi membutuhkan login atau koneksi daring.\n5. Perbarui aplikasi melalui menu resmi aplikasi atau Microsoft Store. Periksa juga Windows Update. Unduh pembaruan hanya dari situs resmi pengembang.\n6. Jika tersedia, buka Settings > Apps > Installed apps > pilih aplikasi > Advanced options, lalu gunakan Repair terlebih dahulu. Gunakan Reset hanya jika memahami bahwa data/pengaturan lokal aplikasi mungkin terhapus. Tidak semua aplikasi menyediakan opsi ini.\n7. Periksa kebutuhan minimum aplikasi, versi Windows, ruang penyimpanan, dan apakah perangkat memenuhi spesifikasi.\n8. Jika tetap gagal, uninstall lalu instal ulang dari sumber resmi. Cadangkan dokumen/proyek dan data aplikasi terlebih dahulu.\n\nJika error masih muncul, kirim nama aplikasi, versi Windows, dan teks/kode error. Jangan mengunduh file DLL dari situs acak atau mematikan antivirus untuk memaksa aplikasi berjalan."
+      ]
+    },
+    {
+      "tag": "terima_kasih",
+      "patterns": [
+        "terima kasih",
+        "makasih",
+        "makasih banyak",
+        "oke terima kasih",
+        "thanks",
+        "terima kasih atas bantuannya",
+        "terimakasih",
+        "terima kasih banyak ya",
+        "makasih ya techmate",
+        "thanks ya",
+        "oke makasih"
+      ],
+      "responses": [
+        "Sama-sama! Semoga laptopmu kembali lancar.",
+        "Dengan senang hati. Semoga sarannya membantu, ya!"
+      ]
+    },
+    {
+      "tag": "perpisahan",
+      "patterns": [
+        "sampai jumpa",
+        "dadah",
+        "bye",
+        "selamat tinggal",
+        "sudah cukup",
+        "aku pergi dulu",
+        "cukup sekian",
+        "aku pamit",
+        "sampai nanti",
+        "sampai ketemu lagi",
+        "saya selesai",
+        "cukup terima kasih",
+        "bye techmate"
+      ],
+      "responses": [
+        "Sampai jumpa! Semoga aktivitasmu lancar.",
+        "Terima kasih sudah menggunakan TechMate. Jaga laptopmu baik-baik, ya!"
+      ]
+    }
+  ],
+  "fallback_near_match": "Aku menangkap kemungkinan masalahnya adalah {topik}. Apakah itu yang sedang kamu alami? Kamu bisa jawab ya, atau jelaskan gejala yang lebih tepat.",
+  "intent_labels": {
+    "salam": "sapaan",
+    "bantuan": "cara menggunakan TechMate",
+    "identitas": "identitas TechMate",
+    "diagnosis_laptop_lemot": "laptop lambat atau lemot",
+    "diagnosis_laptop_panas": "laptop cepat panas",
+    "diagnosis_baterai_boros": "baterai cepat habis",
+    "diagnosis_wifi": "Wi-Fi atau koneksi internet",
+    "diagnosis_penyimpanan_penuh": "penyimpanan laptop penuh",
+    "diagnosis_laptop_tidak_menyala": "laptop tidak menyala",
+    "diagnosis_aplikasi_error": "aplikasi mengalami error",
+    "terima_kasih": "ucapan terima kasih",
+    "perpisahan": "mengakhiri percakapan"
+  }
+}

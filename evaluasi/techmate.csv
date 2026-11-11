@@ -1,0 +1,69 @@
+kalimat,intent
+selamat pagi semuanya,salam
+hai techmate,salam
+selamat malam semua,salam
+bantuan dong,bantuan
+bisa bantu apa,bantuan
+fitur apa saja,bantuan
+siapa nama bot,identitas
+boleh tahu kamu siapa,identitas
+ini chatbot apa,identitas
+laptop lemot sekali,diagnosis_laptop_lemot
+laptop lambat sekali,diagnosis_laptop_lemot
+laptop saya terasa lambat,diagnosis_laptop_lemot
+laptop panas sekali,diagnosis_laptop_panas
+laptop terasa panas,diagnosis_laptop_panas
+kipas laptop berisik,diagnosis_laptop_panas
+baterai cepat habis,diagnosis_baterai_boros
+baterai laptop tidak awet,diagnosis_baterai_boros
+daya baterai cepat turun,diagnosis_baterai_boros
+wifi laptop gagal terhubung,diagnosis_wifi
+wifi tidak muncul di laptop,diagnosis_wifi
+internet laptop tidak jalan,diagnosis_wifi
+penyimpanan laptop hampir penuh,diagnosis_penyimpanan_penuh
+drive c penuh,diagnosis_penyimpanan_penuh
+memori laptop sudah penuh,diagnosis_penyimpanan_penuh
+laptop tidak mau hidup,diagnosis_laptop_tidak_menyala
+laptop mati total,diagnosis_laptop_tidak_menyala
+tombol power tidak merespons,diagnosis_laptop_tidak_menyala
+aplikasi gagal dibuka,diagnosis_aplikasi_error
+aplikasi sering crash,diagnosis_aplikasi_error
+program berhenti sendiri,diagnosis_aplikasi_error
+makasih banyak,terima_kasih
+oke terima kasih,terima_kasih
+thanks ya,terima_kasih
+sampai jumpa lagi,perpisahan
+aku pamit dulu,perpisahan
+dadah,perpisahan
+siapa presiden indonesia,fallback
+resep nasi goreng,fallback
+harga tiket kereta,fallback
+cuaca besok bagaimana,fallback
+laptopku lemot banget,diagnosis_laptop_lemot
+laptop ngelag,diagnosis_laptop_lemot
+laptop lama merespons,diagnosis_laptop_lemot
+kipas laptop bunyi kencang,diagnosis_laptop_panas
+laptop panas berlebihan,diagnosis_laptop_panas
+fan laptop berisik,diagnosis_laptop_panas
+baterai laptop ngedrop,diagnosis_baterai_boros
+persen baterai turun cepat,diagnosis_baterai_boros
+laptop harus selalu dicas,diagnosis_baterai_boros
+wifi tidak nyambung,diagnosis_wifi
+wifi putus putus,diagnosis_wifi
+wifi tersambung tapi internet mati,diagnosis_wifi
+memori laptop habis,diagnosis_penyimpanan_penuh
+storage penuh,diagnosis_penyimpanan_penuh
+drive c hampir habis,diagnosis_penyimpanan_penuh
+laptop tidak mau hidup sama sekali,diagnosis_laptop_tidak_menyala
+layar hitam saat laptop dinyalakan,diagnosis_laptop_tidak_menyala
+power laptop tidak menyala,diagnosis_laptop_tidak_menyala
+aplikasi force close,diagnosis_aplikasi_error
+aplikasi keluar sendiri,diagnosis_aplikasi_error
+aplikasi not responding,diagnosis_aplikasi_error
+makasih ya techmate,terima_kasih
+aku pamit,perpisahan
+bisa bantu masalah laptop,bantuan
+berapa harga tiket kereta,fallback
+resep nasi goreng,fallback
+jadwal pertandingan bola,fallback
+cuaca hari ini bagaimana,fallback
